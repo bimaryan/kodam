@@ -19,4 +19,4 @@ Ikuti langkah-langkah berikut untuk menginstal proyek ini di mesin lokal Anda.
 
    ```bash
    git clone https://github.com/bimaryan/kodam.git
-   cd kodam-api
+   cd kodam
