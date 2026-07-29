@@ -405,4 +405,18 @@ class KodamController extends Controller
         }
         return response()->json(['success' => false], 404);
     }
+
+    public function addLimit(Request $request)
+    {
+        $ip = $request->ip();
+        $today = date('Y-m-d');
+        
+        $limit = \App\Models\DailyLimit::where('ip_address', $ip)->where('date', $today)->first();
+        if ($limit) {
+            $limit->usage_count = max(0, $limit->usage_count - 3);
+            $limit->save();
+        }
+        
+        return response()->json(['success' => true]);
+    }
 }
