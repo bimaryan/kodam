@@ -247,6 +247,7 @@
                                 </p>
                                 <p class="text-sm text-gray-300">{{ $ramalan }}</p>
                             </div>
+                            @endif
                         </div>
                     </div>
                 @elseif(isset($mode) && $mode === 'jodoh' && isset($kodam1))
