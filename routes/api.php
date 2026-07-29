@@ -10,4 +10,4 @@ Route::get('kodam/{id}', [KodamController::class, 'show']);
 Route::post('kodam', [KodamController::class, 'store']);
 Route::put('kodam/{id}', [KodamController::class, 'update']);
 Route::delete('kodam/{id}', [KodamController::class, 'destroy']);
-
+Route::post('chat-khodam', [KodamController::class, 'chatKhodam']);

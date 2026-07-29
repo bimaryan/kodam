@@ -198,6 +198,48 @@
             </div>
         </div>
 
+        <div class="grid grid-cols-1 gap-8 mt-8">
+            <!-- POST Chat Khodam Endpoint -->
+            <div class="glass-panel rounded-2xl p-6 md:p-8 flex flex-col h-full">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="method-badge method-post">POST</span>
+                    <h3 class="text-xl font-semibold text-white">/chat-khodam</h3>
+                </div>
+                <p class="text-gray-400 mb-6 text-sm flex-grow">Berbicara langsung dengan Khodam menggunakan integrasi LLM (Groq AI) yang dinamis.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-auto">
+                    <div>
+                        <p class="text-sm text-gray-500 mb-2 font-medium">Contoh Request:</p>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <div class="mac-btn bg-red-500"></div><div class="mac-btn bg-yellow-500"></div><div class="mac-btn bg-green-500"></div>
+                            </div>
+                            <pre class="code-font">curl -X POST http://127.0.0.1:8000/api/chat-khodam \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -d '{
+    <span class="json-key">"user_nama"</span>: <span class="json-string">"Bima"</span>,
+    <span class="json-key">"khodam_nama"</span>: <span class="json-string">"Macan Putih"</span>,
+    <span class="json-key">"message"</span>: <span class="json-string">"Mbah, kapan saya kaya?"</span>
+  }'</pre>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <p class="text-sm text-gray-500 mb-2 font-medium">Response Sukses (200 OK):</p>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <div class="mac-btn bg-red-500"></div><div class="mac-btn bg-yellow-500"></div><div class="mac-btn bg-green-500"></div>
+                            </div>
+                            <pre class="code-font">{
+  <span class="json-key">"reply"</span>: <span class="json-string">"Halah Bima, ngarep kaya tapi bangunnya siang mulu. Kerja yang bener, jangan cuma ngayal jadi sultan! Gue cakar juga nih."</span>
+}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer class="mt-auto py-6 text-center text-sm text-gray-500/60 font-light z-10">

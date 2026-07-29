@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class History extends Model
+class DailyLimit extends Model
 {
     use HasFactory;
-    
-    protected $fillable = ['nama', 'kodam_nama', 'sesajen'];
+
+    protected $fillable = ['ip_address', 'date', 'usage_count'];
 }
