@@ -247,7 +247,6 @@
                                 </p>
                                 <p class="text-sm text-gray-300">{{ $ramalan }}</p>
                             </div>
-                            @endif
                         </div>
                     </div>
                 @elseif(isset($mode) && $mode === 'jodoh' && isset($kodam1))
@@ -650,8 +649,8 @@
                     </div>
                 </div>
 
-                @elseif(isset($mode) && $mode === 'couple' && isset($kodam1))
-                <div id="certificateTemplateCouple" style="position: absolute; left: -9999px; top: -9999px; width: 600px; padding: 40px; background: #0f0a18; color: #fff; font-family: 'Outfit', sans-serif; text-align: center; border: 8px solid #ec4899; border-radius: 20px;">
+                @elseif(isset($mode) && $mode === 'jodoh' && isset($kodam1))
+                <div id="certificateTemplateJodoh" style="position: absolute; left: -9999px; top: -9999px; width: 600px; padding: 40px; background: #0f0a18; color: #fff; font-family: 'Outfit', sans-serif; text-align: center; border: 8px solid #ec4899; border-radius: 20px;">
                     <h1 style="font-family: 'Cinzel', serif; font-size: 2.5rem; font-weight: bold; margin-bottom: 10px; color: #fff;">Sertifikat Kecocokan Gaib</h1>
                     <p style="font-size: 1.2rem; color: #cbd5e1; margin-bottom: 40px;">Hasil Terawangan Pasangan:</p>
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
@@ -672,7 +671,31 @@
                     </div>
                     <div style="margin-top: 40px; font-size: 1rem; color: #9ca3af;">
                         <p>Di-generate oleh <strong>Cek Kodam Online</strong></p>
-                        <p class="flex items-center justify-center gap-1">Crafted with <svg class="w-3 h-3 text-[#ec4899]" fill="currentColor" viewBox="0 0 24 24"><path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"></path></svg> by <strong style="color: #ec4899;">Ryaze.my.id</strong></p>
+                    </div>
+                </div>
+
+                @elseif(isset($mode) && $mode === 'fusion' && isset($kodam1))
+                <div id="certificateTemplateFusion" style="position: absolute; left: -9999px; top: -9999px; width: 600px; padding: 40px; background: #0f0a18; color: #fff; font-family: 'Outfit', sans-serif; text-align: center; border: 8px solid #a855f7; border-radius: 20px;">
+                    <h1 style="font-family: 'Cinzel', serif; font-size: 2.5rem; font-weight: bold; margin-bottom: 10px; color: #a855f7;">Sertifikat Fusi Terlarang</h1>
+                    <p style="font-size: 1.2rem; color: #cbd5e1; margin-bottom: 40px;">Penyatuan Energi Dua Entitas:</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                        <div style="width: 45%;">
+                            <p style="font-size: 1.8rem; font-weight: bold; color: #fff;">{{ $nama_1 }}</p>
+                            <p style="font-size: 1.2rem; color: #eab308; margin-top: 10px;">{{ $kodam1->nama }}</p>
+                        </div>
+                        <div style="width: 10%; font-size: 2.5rem; font-weight: bold; color: #a855f7;">+</div>
+                        <div style="width: 45%;">
+                            <p style="font-size: 1.8rem; font-weight: bold; color: #fff;">{{ $nama_2 }}</p>
+                            <p style="font-size: 1.2rem; color: #eab308; margin-top: 10px;">{{ $kodam2->nama }}</p>
+                        </div>
+                    </div>
+                    <div style="margin: 30px auto; padding: 30px; border: 2px solid rgba(168,85,247,0.5); border-radius: 20px; background: rgba(168,85,247,0.1);">
+                        <p style="font-size: 1.2rem; color: #9ca3af; margin-bottom: 10px;">Hasil Mutasi:</p>
+                        <p style="font-size: 3rem; font-weight: bold; margin-bottom: 20px; color: #d8b4fe;">{{ $fusionName }}</p>
+                        <p style="font-size: 1.2rem; color: #e2e8f0; font-style: italic;">"{{ $fusionDesc }}"</p>
+                    </div>
+                    <div style="margin-top: 40px; font-size: 1rem; color: #9ca3af;">
+                        <p>Di-generate oleh <strong>Cek Kodam Online</strong></p>
                     </div>
                 </div>
 
@@ -701,7 +724,6 @@
                     </div>
                     <div style="margin-top: 40px; font-size: 1rem; color: #9ca3af;">
                         <p>Di-generate oleh <strong>Cek Kodam Online</strong></p>
-                        <p class="flex items-center justify-center gap-1 mt-1">Crafted with <svg class="w-3 h-3 text-[#ec4899]" fill="currentColor" viewBox="0 0 24 24"><path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"></path></svg> by <strong style="color: #ec4899;">Ryaze.my.id</strong></p>
                     </div>
                 </div>
                 @endif
@@ -741,7 +763,8 @@
                         const mode = '{{ $mode ?? "" }}';
                         let certId = 'certificateTemplateSingle';
                         
-                        if (mode === 'couple') certId = 'certificateTemplateCouple';
+                        if (mode === 'jodoh') certId = 'certificateTemplateJodoh';
+                        else if (mode === 'fusion') certId = 'certificateTemplateFusion';
                         else if (mode === 'battle') certId = 'certificateTemplateBattle';
                         else if (mode === 'single' && format === 'story') certId = 'certificateTemplateStory';
                         
@@ -777,7 +800,8 @@
                             const link = document.createElement('a');
                             
                             let filename = 'Sertifikat-Khodam.png';
-                            if (mode === 'couple') filename = 'Kecocokan-Khodam-{{ $nama_1 ?? "" }}-{{ $nama_2 ?? "" }}.png';
+                            if (mode === 'jodoh') filename = 'Kecocokan-Khodam-{{ $nama_1 ?? "" }}-{{ $nama_2 ?? "" }}.png';
+                            else if (mode === 'fusion') filename = 'Fusi-Khodam-{{ $nama_1 ?? "" }}-{{ $nama_2 ?? "" }}.png';
                             else if (mode === 'battle') filename = 'Battle-Khodam-{{ $nama_1 ?? "" }}-vs-{{ $nama_2 ?? "" }}.png';
                             else filename = (format === 'story' ? 'Story-' : 'Square-') + 'Khodam-{{ $nama ?? "Anda" }}.png';
                             
