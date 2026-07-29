@@ -201,7 +201,7 @@
     </main>
 
     <footer class="mt-auto py-6 text-center text-sm text-gray-500/60 font-light z-10">
-        &copy; {{ date('Y') }} Cek Kodam Online. API didesain untuk pengembang.
+        &copy; {{ date('Y') }} Cek Kodam Online. Crafted with 💜 by <a href="https://ryaze.my.id" target="_blank" class="hover:text-pink-400 transition-colors font-medium">Ryaze.my.id</a>.
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
